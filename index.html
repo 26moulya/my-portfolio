@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pz2C6+KdAqf4/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moulya K.B. — Portfolio</title>
+  <meta name="description" content="Moulya K.B. — M.Tech CSE Scholar, AI & Data Science enthusiast, patent holder, and published researcher. Explore projects, skills, and publications." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; 
+      --card:#111b2c; 
+      --muted:#94a3b8; 
+      --accent:#6ee7b7; 
+      --accent2:#60a5fa;
+      --glass: rgba(255,255,255,0.05);
+      --radius:16px; 
+      --maxwidth:1100px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    *{box-sizing:border-box; transition: all 0.3s ease;}
+    html,body{height:100%; margin:0; background: linear-gradient(180deg,#0f1724,#071025); color:#e6eef8;}
+    a{color:var(--accent); text-decoration:none; transition: color 0.3s;}
+    a:hover{color:var(--accent2);}
+
+    .wrap{max-width:var(--maxwidth); margin:36px auto; padding:28px;}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px; 
+      backdrop-filter: blur(6px); padding:12px 16px; border-radius:var(--radius); 
+      background: rgba(15,23,36,0.7);
+    }
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{
+      width:50px;height:50px;border-radius:12px;
+      background: linear-gradient(135deg,var(--accent),var(--accent2));
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#05202a;
+      box-shadow:0 4px 15px rgba(0,0,0,0.5); font-size:20px;
+    }
+    nav{display:flex;gap:16px;align-items:center}
+    .btn{
+      background: linear-gradient(90deg,var(--accent),var(--accent2));
+      border:0; padding:10px 16px; border-radius:12px; font-weight:600; color:#05202a; 
+      box-shadow:0 4px 12px rgba(0,0,0,0.4); cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.5);}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:32px;margin-top:32px}
+
+    .intro{
+      background: var(--card); padding:32px; border-radius:var(--radius);
+      box-shadow:0 8px 40px rgba(2,6,23,0.7); position:relative; overflow:hidden;
+    }
+    .intro::before{
+      content:""; position:absolute; top:0; left:0; width:100%; height:100%; 
+      background: linear-gradient(135deg, rgba(110,231,183,0.05), rgba(96,165,250,0.05));
+      border-radius:var(--radius); pointer-events:none;
+    }
+
+    h1{margin:0 0 8px;font-size:32px; color: #fff;}
+    .sub{color:var(--accent2); margin:0 0 20px; font-weight:500;}
+    .cta{display:flex;gap:12px; margin-top:18px;}
+
+    .card{background:var(--glass); padding:20px;border-radius:var(--radius); backdrop-filter: blur(6px);}
+
+    .skills{display:flex;gap:12px;flex-wrap:wrap; margin-top:8px}
+    .skill{
+      background: linear-gradient(135deg, rgba(110,231,183,0.2), rgba(96,165,250,0.2));
+      padding:8px 14px; border-radius:999px;font-size:14px;color:#e6eef8; font-weight:500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:18px}
+    .project{
+      padding:18px;border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow:0 6px 20px rgba(0,0,0,0.4); transition: transform 0.3s;
+    }
+    .project:hover{transform: translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+    .project h3{margin:0 0 8px; color:var(--accent);}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    .profile{
+      background: linear-gradient(180deg,#071830 0%, rgba(255,255,255,0.03) 100%);
+      padding:20px;border-radius:var(--radius); box-shadow:0 6px 25px rgba(0,0,0,0.5);
+    }
+    .avatar{
+      width:100%;border-radius:12px; height:180px; display:flex;align-items:center;justify-content:center; overflow:hidden; background: #071025;
+      box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover; transition: transform 0.3s;}
+    .avatar img:hover{transform: scale(1.05);}
+
+    .contact a{
+      display:block;padding:12px;border-radius:12px;background: rgba(110,231,183,0.1);margin-bottom:10px;
+      color:#fff; font-weight:500; transition: background 0.3s;
+    }
+    .contact a:hover{
+      background: linear-gradient(90deg,var(--accent),var(--accent2)); color:#05202a;
+    }
+
+    footer{margin-top:36px;color:var(--muted);text-align:center;font-size:13px}
+
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">
+      <div class="mark">MK</div>
+      <div>
+       <div style="font-weight:700; font-size:18px;">Moulya K.B.</div>
+<div class="tiny muted" style="margin-top:4px;">
+ M.Tech CSE | AI & Data Science| Data Science Intern @Phoenix | Open to AI Data Analyst Roles
+</div></div>
+
+    </div>
+    <nav>
+      <a class="tiny" href="#about">About</a>
+      <a class="tiny" href="#projects">Projects</a>
+      <a class="tiny" href="#skills">Skills</a>
+      <a class="tiny" href="#publications">Patents & Publications</a>
+      <a class="tiny" href="#resume">Resume</a>
+      <a class="tiny" href="#contact">Contact</a>
+      <a class="btn" href="#contact">Hire Me</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="intro card" id="about">
+     <h1 style="font-size:36px; font-weight:700; line-height:1.2;">
+  Hi, I’m <span style="color:#6ee7b7;">Moulya K.B</span>
+</h1>
+
+      <p class="sub">M.Tech CSE Scholar | Research Intern | Data Science & AI Enthusiast | Patent Holder & Published Researcher</p>
+      <div class="tiny muted">Quick bio</div>
+      <p class="tiny" style="margin-top:8px">
+        Passionate about AI, Data Analytics, and innovative solutions. Experienced in machine learning, computer vision, federated learning, and UI/UX design. My work includes internships, a published IEEE paper, and a granted patent in intelligent transport systems.
+      </p>
+      <div class="cta">
+        <a class="primary btn" href="#projects">See projects</a>
+        <a class="btn" href="/Resume_Moulya.pdf" target="_blank">Download CV</a>
+      </div>
+
+    <div class="skills" id="skills">
+  <div class="skill"><i class="fab fa-python"></i> Python</div>
+  <div class="skill"><i class="fas fa-database"></i> Pandas</div>
+  <div class="skill"><i class="fas fa-robot"></i> Machine Learning</div>
+  <div class="skill"><i class="fas fa-brain"></i> Deep Learning (CNN, YOLO)</div>
+  <div class="skill"><i class="fas fa-chart-line"></i> Data Visualization (Tableau, Excel)</div>
+  <div class="skill"><i class="fas fa-network-wired"></i> Federated Learning</div>
+  <div class="skill"><i class="fas fa-pencil-ruler"></i> UI/UX</div>
+</div>
+
+
+      <div style="margin-top:18px">
+        <div class="tiny muted">Education</div>
+        <div class="tiny">M.Tech — Computer Science & Engineering (AI Specialization)<br>
+        B.E. — Computer Science Engineering (VTU)</div>
+      </div>
+    </section>
+
+<aside style="width:100%">
+  <div class="profile card">
+    <div class="avatar" style="height:auto; max-height:250px;">
+      <img src="profile.png" alt="Moulya K.B." style="width:100%; height:auto; object-fit:contain; border-radius:12px;">
+    </div>
+    <h3 style="margin:12px 0 6px">Contact & Links</h3>
+    <div class="contact">
+      <a href="mailto:kbmoulya84@gmail.com">Email — kbmoulya84@gmail.com</a>
+      <a href="https://www.linkedin.com/in/moulya-k-b-b53b21211" target="_blank">LinkedIn — linkedin.com/in/moulya-k-b-b53b21211</a>
+      <a href="https://github.com/26moulya" target="_blank">GitHub — github.com/26moulya</a>
+    </div>
+    <div style="margin-top:8px" class="tiny muted">Location</div>
+    <div class="tiny">Bengaluru, India</div>
+  </div>
+</aside>
+
+<!-- Projects Section with Icons -->
+<section id="projects" style="margin-top:22px">
+  <h2 style="margin:0 0 12px">Selected projects</h2>
+  <div class="projects">
+    <article class="project">
+      <div style="width:100%; height:140px; display:flex; align-items:center; justify-content:center; 
+                  background:linear-gradient(135deg,#6ee7b7,#60a5fa); border-radius:12px; font-size:48px; color:#05202a; margin-bottom:10px;">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Intelligent Theft Management System</h3>
+      <p>YOLO-based human detection for security in jewelry stores. Triggers alarms based on unauthorized movements. (Accolade Tech Internship)</p>
+    </article>
+    <article class="project">
+      <div style="width:100%; height:140px; display:flex; align-items:center; justify-content:center; 
+                  background:linear-gradient(135deg,#facc15,#60a5fa); border-radius:12px; font-size:48px; color:#05202a; margin-bottom:10px;">
+        <i class="fas fa-notes-medical"></i>
+      </div>
+      <h3>Federated Healthcare Analytics</h3>
+      <p>Applied federated learning with Random Forest on UCI datasets to predict urinary bladder inflammation and nephritis while ensuring data privacy.</p>
+    </article>
+    <article class="project">
+      <div style="width:100%; height:140px; display:flex; align-items:center; justify-content:center; 
+                  background:linear-gradient(135deg,#34d399,#3b82f6); border-radius:12px; font-size:48px; color:#05202a; margin-bottom:10px;">
+        <i class="fas fa-car"></i>
+      </div>
+      <h3>Self-driving Car (Simulator)</h3>
+      <p>Convolutional Neural Network to detect lanes and navigate autonomously in a virtual environment. Secured 2nd prize at Project Exhibition 2024.</p>
+    </article>
+    <article class="project">
+      <div style="width:100%; height:140px; display:flex; align-items:center; justify-content:center; 
+                  background:linear-gradient(135deg,#f472b6,#60a5fa); border-radius:12px; font-size:48px; color:#05202a; margin-bottom:10px;">
+        <i class="fas fa-recycle"></i>
+      </div>
+      <h3>Smart Waste Management — Data Analytics</h3>
+      <p>IoT data ingestion + analytics dashboard to optimize collection routes and reduce overflow. Tools: Python, Pandas, Plotly, Flask.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Publications Section -->
+<section id="publications" style="margin-top:22px">
+  <h2 style="margin:0 0 12px">Patents & Publications</h2>
+  <div class="projects">
+    <article class="project">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+        <i class="fas fa-lightbulb" style="color:#6ee7b7; font-size:22px;"></i>
+        <h3 style="margin:0;">Patent</h3>
+        <span style="background:#60a5fa; color:#05202a; padding:2px 6px; border-radius:6px; font-size:12px;">2025</span>
+      </div>
+      <p><b>Integrated Smart Public Transport System</b> — Real-time traffic management and transport optimization using AI, IoT sensors, and Random Forest classifier.</p>
+    </article>
+    <article class="project">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+        <i class="fas fa-file-alt" style="color:#facc15; font-size:22px;"></i>
+        <h3 style="margin:0;">Conference Publication</h3>
+        <span style="background:#34d399; color:#05202a; padding:2px 6px; border-radius:6px; font-size:12px;">2025</span>
+      </div>
+      <p><b>Review of Group Formalism for Automated Formalization in Mechanical Engineering</b> — IEEE ICICV 2025. Proposed integration of CGANs with CAD workflows for design automation and optimization.</p>
+    </article>
+  </div>
+</section>
+
+
+  <!-- Resume Section -->
+<section id="resume" style="margin-top:22px">
+  <h2 style="margin:0 0 12px">Resume Highlights</h2>
+  <div class="projects">
+    <article class="project">
+      <h3>Experience</h3>
+      <p>Data Science Intern — Phoenix Solutions (2025)<br>
+         Research Intern — ONE JOB (2025)<br>
+         Student Intern — QtechSolution (2024)<br>
+         Student Intern — Accolade Tech Solutions (2023)</p>
+    </article>
+    <article class="project">
+      <h3>Certifications</h3>
+      <p>British Airways Data Science Job Simulation (2025)<br>
+         Python for Data Science (IBM)<br>
+         Data Analysis using Python (IBM)<br>
+         UX/UI Design & Blockchain (Accolade Tech, 2023)<br>
+         Generative AI (Google Cloud)<br>
+         Cyber Security & Ethical Hacking</p>
+    </article>
+    <article class="project">
+      <h3>Awards</h3>
+      <p>2nd Prize — Project Exhibition 2024 (Self-driving Car Project)</p>
+    </article>
+  </div>
+ <!-- Download Resume & Cover Letter Buttons -->
+<div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+  <a href="Resume_Moulya.pdf" target="_blank" class="btn">📄 Download Resume</a>
+  <a href="Cover_Letter.pdf" target="_blank" class="btn">✉️ View Cover Letter</a>
+</div>
+</section>
+
+
+ <!-- Footer & Contact Section -->
+<footer id="contact" style="margin-top:40px">
+  <div class="wrap" style="max-width:800px; margin:0 auto; padding:20px; background:var(--card); border-radius:14px;">
+    
+    <h2 style="margin:0 0 12px">Contact Me</h2>
+    <p class="tiny muted">You can reach me directly via email or send a message below:</p>
+
+    <!-- Contact Info -->
+    <div class="contact" style="margin-bottom:16px;">
+      <a href="mailto:kbmoulya84@gmail.com">Email — kbmoulya84@gmail.com</a>
+      <a href="https://www.linkedin.com/in/moulya-k-b-b53b21211" target="_blank">LinkedIn — linkedin.com/in/moulya-k-b-b53b21211</a>
+      <a href="https://github.com/26moulya" target="_blank">GitHub — github.com/26moulya</a>
+    </div>
+
+    <!-- Contact Form -->
+    <form action="mailto:kbmoulya84@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:10px;">
+      <input type="text" name="name" placeholder="Your Name" required style="padding:10px; border-radius:8px; border:none; background:rgba(255,255,255,0.04); color:#e6eef8;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding:10px; border-radius:8px; border:none; background:rgba(255,255,255,0.04); color:#e6eef8;">
+      <textarea name="message" placeholder="Your Message" rows="5" required style="padding:10px; border-radius:8px; border:none; background:rgba(255,255,255,0.04); color:#e6eef8;"></textarea>
+      <button type="submit" class="primary" style="align-self:flex-start;">Send Message</button>
+    </form>
+
+    <!-- Copyright -->
+    <p class="tiny muted" style="margin-top:20px; text-align:center;">© <span id="year"></span> Moulya K.B.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
